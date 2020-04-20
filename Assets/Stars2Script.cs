@@ -169,7 +169,7 @@ public class Stars2Script : MonoBehaviour
 		{
 			if (Costing == 0)
 			{
-				int[] Prototype = {1, 4, 4, 2, 0, 0, 0, 0, 0, 0};
+				int[] Prototype = {1, 4, 4, 3, 0, 0, 0, 0, 0, 0};
 				for (int x = 0; x < Siphone.Count(); x++)
 				{
 					Siphone[x] = Prototype[x];
@@ -343,7 +343,7 @@ public class Stars2Script : MonoBehaviour
 			
 			else if (Costing == 9)
 			{
-				int[] Prototype = {2, 2, 4, 1, 3, 0, 0, 0, 0, 0};
+				int[] Prototype = {2, 4, 4, 1, 3, 0, 0, 0, 0, 0};
 				for (int x = 0; x < Siphone.Count(); x++)
 				{
 					Siphone[x] = Prototype[x];
@@ -493,7 +493,7 @@ public class Stars2Script : MonoBehaviour
 			
 			else if (Costing == 5)
 			{
-				int[] Prototype = {3, 3, 3, 1, 0, 0, 0, 0, 0, 0};
+				int[] Prototype = {3, 3, 3, 3, 1, 0, 0, 0, 0, 0};
 				for (int x = 0; x < Siphone.Count(); x++)
 				{
 					Siphone[x] = Prototype[x];
