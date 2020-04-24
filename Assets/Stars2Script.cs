@@ -63,10 +63,12 @@ public class Stars2Script : MonoBehaviour
 	void GenerateHopping()
 	{
 		Costing = UnityEngine.Random.Range(0,10);
+		Debug.LogFormat("[Stars #{0}] The number shown in the module is: {1}", moduleId, Costing.ToString());
 		Number.text = Costing.ToString();
 		if (Bomb.IsIndicatorPresent("CAR"))
 			{
 				Costing = (Costing + Bomb.GetBatteryCount()) % 10;
+				Debug.LogFormat("[Stars #{0}] There is a CAR indicator. The value of actually value that must be used is: {1}", moduleId, Costing.ToString());
 			}
 	}
 	
@@ -74,6 +76,7 @@ public class Stars2Script : MonoBehaviour
 	{
 		if (Bomb.IsPortPresent(Port.RJ45))
 		{
+			Debug.LogFormat("[Stars #{0}] Column 1 is the correct column", moduleId);
 			if (Costing == 0)
 			{
 				int[] Prototype = {2, 3, 4, 0, 0, 0, 0, 0, 0, 0};
@@ -81,6 +84,7 @@ public class Stars2Script : MonoBehaviour
 				{
 					Siphone[x] = Prototype[x];
 				}
+				Debug.LogFormat("[Stars #{0}] The sequence that must be submitted is: 2, 3, 4", moduleId);
 			}
 			
 			else if (Costing == 1)
@@ -90,6 +94,7 @@ public class Stars2Script : MonoBehaviour
 				{
 					Siphone[x] = Prototype[x];
 				}
+				Debug.LogFormat("[Stars #{0}] The sequence that must be submitted is: 3, 2, 1", moduleId);
 			}
 			
 			else if (Costing == 2)
@@ -99,6 +104,7 @@ public class Stars2Script : MonoBehaviour
 				{
 					Siphone[x] = Prototype[x];
 				}
+				Debug.LogFormat("[Stars #{0}] The sequence that must be submitted is: 4, 2, 5, 1, 2, 3", moduleId);
 			}
 			
 			else if (Costing == 3)
@@ -108,6 +114,7 @@ public class Stars2Script : MonoBehaviour
 				{
 					Siphone[x] = Prototype[x];
 				}
+				Debug.LogFormat("[Stars #{0}] The sequence that must be submitted is: 1", moduleId);
 			}
 			
 			else if (Costing == 4)
@@ -117,6 +124,7 @@ public class Stars2Script : MonoBehaviour
 				{
 					Siphone[x] = Prototype[x];
 				}
+				Debug.LogFormat("[Stars #{0}] The sequence that must be submitted is: 2, 5", moduleId);
 			}
 			
 			else if (Costing == 5)
@@ -126,6 +134,7 @@ public class Stars2Script : MonoBehaviour
 				{
 					Siphone[x] = Prototype[x];
 				}
+				Debug.LogFormat("[Stars #{0}] The sequence that must be submitted is: 3, 2, 4, 2", moduleId);
 			}
 			
 			else if (Costing == 6)
@@ -135,6 +144,7 @@ public class Stars2Script : MonoBehaviour
 				{
 					Siphone[x] = Prototype[x];
 				}
+				Debug.LogFormat("[Stars #{0}] The sequence that must be submitted is: 0", moduleId);
 			}
 			
 			else if (Costing == 7)
@@ -144,6 +154,7 @@ public class Stars2Script : MonoBehaviour
 				{
 					Siphone[x] = Prototype[x];
 				}
+				Debug.LogFormat("[Stars #{0}] The sequence that must be submitted is: 5, 5", moduleId);
 			}
 			
 			else if (Costing == 8)
@@ -153,6 +164,7 @@ public class Stars2Script : MonoBehaviour
 				{
 					Siphone[x] = Prototype[x];
 				}
+				Debug.LogFormat("[Stars #{0}] The sequence that must be submitted is: 1, 1, 1, 5, 5, 5", moduleId);
 			}
 			
 			else if (Costing == 9)
@@ -162,11 +174,13 @@ public class Stars2Script : MonoBehaviour
 				{
 					Siphone[x] = Prototype[x];
 				}
+				Debug.LogFormat("[Stars #{0}] The sequence that must be submitted is: 1, 4, 2, 5, 3", moduleId);
 			}
 		}
 		
 		else if (Bomb.GetBatteryCount() > 3)
 		{
+			Debug.LogFormat("[Stars #{0}] Column 2 is the correct column", moduleId);
 			if (Costing == 0)
 			{
 				int[] Prototype = {1, 4, 4, 3, 0, 0, 0, 0, 0, 0};
@@ -174,6 +188,7 @@ public class Stars2Script : MonoBehaviour
 				{
 					Siphone[x] = Prototype[x];
 				}
+				Debug.LogFormat("[Stars #{0}] The sequence that must be submitted is: 1, 4, 4, 3", moduleId);
 			}
 			
 			else if (Costing == 1)
@@ -183,6 +198,7 @@ public class Stars2Script : MonoBehaviour
 				{
 					Siphone[x] = Prototype[x];
 				}
+				Debug.LogFormat("[Stars #{0}] The sequence that must be submitted is: 0", moduleId);
 			}
 			
 			else if (Costing == 2)
@@ -192,6 +208,7 @@ public class Stars2Script : MonoBehaviour
 				{
 					Siphone[x] = Prototype[x];
 				}
+				Debug.LogFormat("[Stars #{0}] The sequence that must be submitted is: 5, 4, 3, 2, 1", moduleId);
 			}
 			
 			else if (Costing == 3)
@@ -201,6 +218,7 @@ public class Stars2Script : MonoBehaviour
 				{
 					Siphone[x] = Prototype[x];
 				}
+				Debug.LogFormat("[Stars #{0}] The sequence that must be submitted is: 2, 2", moduleId);
 			}
 			
 			else if (Costing == 4)
@@ -210,6 +228,7 @@ public class Stars2Script : MonoBehaviour
 				{
 					Siphone[x] = Prototype[x];
 				}
+				Debug.LogFormat("[Stars #{0}] The sequence that must be submitted is: 4, 1, 4", moduleId);
 			}
 			
 			else if (Costing == 5)
@@ -219,6 +238,7 @@ public class Stars2Script : MonoBehaviour
 				{
 					Siphone[x] = Prototype[x];
 				}
+				Debug.LogFormat("[Stars #{0}] The sequence that must be submitted is: 4, 4, 3, 1, 2", moduleId);
 			}
 			
 			else if (Costing == 6)
@@ -228,6 +248,7 @@ public class Stars2Script : MonoBehaviour
 				{
 					Siphone[x] = Prototype[x];
 				}
+				Debug.LogFormat("[Stars #{0}] The sequence that must be submitted is: 2, 3", moduleId);
 			}
 			
 			else if (Costing == 7)
@@ -237,6 +258,7 @@ public class Stars2Script : MonoBehaviour
 				{
 					Siphone[x] = Prototype[x];
 				}
+				Debug.LogFormat("[Stars #{0}] The sequence that must be submitted is: 4, 3, 2, 4, 5", moduleId);
 			}
 			
 			else if (Costing == 8)
@@ -246,6 +268,7 @@ public class Stars2Script : MonoBehaviour
 				{
 					Siphone[x] = Prototype[x];
 				}
+				Debug.LogFormat("[Stars #{0}] The sequence that must be submitted is: 5, 3, 5, 4", moduleId);
 			}
 			
 			else if (Costing == 9)
@@ -255,11 +278,13 @@ public class Stars2Script : MonoBehaviour
 				{
 					Siphone[x] = Prototype[x];
 				}
+				Debug.LogFormat("[Stars #{0}] The sequence that must be submitted is: 5, 2, 4, 5", moduleId);
 			}
 		}
 		
 		else if (Bomb.GetSerialNumber().Contains("S") || Bomb.GetSerialNumber().Contains("T") || Bomb.GetSerialNumber().Contains("A") || Bomb.GetSerialNumber().Contains("R"))
 		{
+			Debug.LogFormat("[Stars #{0}] Column 3 is the correct column", moduleId);
 			if (Costing == 0)
 			{
 				int[] Prototype = {5, 5, 5, 3, 3, 0, 0, 0, 0, 0};
@@ -267,6 +292,7 @@ public class Stars2Script : MonoBehaviour
 				{
 					Siphone[x] = Prototype[x];
 				}
+				Debug.LogFormat("[Stars #{0}] The sequence that must be submitted is: 5, 5, 5, 3, 3", moduleId);
 			}
 			
 			else if (Costing == 1)
@@ -276,6 +302,7 @@ public class Stars2Script : MonoBehaviour
 				{
 					Siphone[x] = Prototype[x];
 				}
+				Debug.LogFormat("[Stars #{0}] The sequence that must be submitted is: 1, 2, 1", moduleId);
 			}
 			
 			else if (Costing == 2)
@@ -285,6 +312,7 @@ public class Stars2Script : MonoBehaviour
 				{
 					Siphone[x] = Prototype[x];
 				}
+				Debug.LogFormat("[Stars #{0}] The sequence that must be submitted is: 4, 2, 3", moduleId);
 			}
 			
 			else if (Costing == 3)
@@ -294,6 +322,7 @@ public class Stars2Script : MonoBehaviour
 				{
 					Siphone[x] = Prototype[x];
 				}
+				Debug.LogFormat("[Stars #{0}] The sequence that must be submitted is: 3, 3, 3", moduleId);
 			}
 			
 			else if (Costing == 4)
@@ -303,6 +332,7 @@ public class Stars2Script : MonoBehaviour
 				{
 					Siphone[x] = Prototype[x];
 				}
+				Debug.LogFormat("[Stars #{0}] The sequence that must be submitted is: 1, 5, 4, 4, 3, 2", moduleId);
 			}
 			
 			else if (Costing == 5)
@@ -312,6 +342,7 @@ public class Stars2Script : MonoBehaviour
 				{
 					Siphone[x] = Prototype[x];
 				}
+				Debug.LogFormat("[Stars #{0}] The sequence that must be submitted is: 5, 5, 2, 5", moduleId);
 			}
 			
 			else if (Costing == 6)
@@ -321,6 +352,7 @@ public class Stars2Script : MonoBehaviour
 				{
 					Siphone[x] = Prototype[x];
 				}
+				Debug.LogFormat("[Stars #{0}] The sequence that must be submitted is: 1, 5", moduleId);
 			}
 			
 			else if (Costing == 7)
@@ -330,6 +362,7 @@ public class Stars2Script : MonoBehaviour
 				{
 					Siphone[x] = Prototype[x];
 				}
+				Debug.LogFormat("[Stars #{0}] The sequence that must be submitted is: 1, 1, 1", moduleId);
 			}
 			
 			else if (Costing == 8)
@@ -339,6 +372,7 @@ public class Stars2Script : MonoBehaviour
 				{
 					Siphone[x] = Prototype[x];
 				}
+				Debug.LogFormat("[Stars #{0}] The sequence that must be submitted is: 2, 2, 5", moduleId);
 			}
 			
 			else if (Costing == 9)
@@ -348,11 +382,13 @@ public class Stars2Script : MonoBehaviour
 				{
 					Siphone[x] = Prototype[x];
 				}
+				Debug.LogFormat("[Stars #{0}] The sequence that must be submitted is: 2, 4, 4, 1, 3", moduleId);
 			}
 		}
 		
 		else if (Bomb.GetOffIndicators().Count() == 0)
 		{
+			Debug.LogFormat("[Stars #{0}] Column 4 is the correct column", moduleId);
 			if (Costing == 0)
 			{
 				int[] Prototype = {1, 2, 3, 4, 5, 0, 0, 0, 0, 0};
@@ -360,6 +396,7 @@ public class Stars2Script : MonoBehaviour
 				{
 					Siphone[x] = Prototype[x];
 				}
+				Debug.LogFormat("[Stars #{0}] The sequence that must be submitted is: 1, 2, 3, 4, 5", moduleId);
 			}
 			
 			else if (Costing == 1)
@@ -369,6 +406,7 @@ public class Stars2Script : MonoBehaviour
 				{
 					Siphone[x] = Prototype[x];
 				}
+				Debug.LogFormat("[Stars #{0}] The sequence that must be submitted is: 1, 1, 2, 2, 3, 3", moduleId);
 			}
 			
 			else if (Costing == 2)
@@ -378,6 +416,7 @@ public class Stars2Script : MonoBehaviour
 				{
 					Siphone[x] = Prototype[x];
 				}
+				Debug.LogFormat("[Stars #{0}] The sequence that must be submitted is: 5, 3, 1", moduleId);
 			}
 			
 			else if (Costing == 3)
@@ -387,6 +426,7 @@ public class Stars2Script : MonoBehaviour
 				{
 					Siphone[x] = Prototype[x];
 				}
+				Debug.LogFormat("[Stars #{0}] The sequence that must be submitted is: 0", moduleId);
 			}
 			
 			else if (Costing == 4)
@@ -396,6 +436,7 @@ public class Stars2Script : MonoBehaviour
 				{
 					Siphone[x] = Prototype[x];
 				}
+				Debug.LogFormat("[Stars #{0}] The sequence that must be submitted is: 3, 4, 2", moduleId);
 			}
 			
 			else if (Costing == 5)
@@ -405,6 +446,7 @@ public class Stars2Script : MonoBehaviour
 				{
 					Siphone[x] = Prototype[x];
 				}
+				Debug.LogFormat("[Stars #{0}] The sequence that must be submitted is: 1, 2, 3, 4, 5, 4, 3, 2, 1", moduleId);
 			}
 			
 			else if (Costing == 6)
@@ -414,6 +456,7 @@ public class Stars2Script : MonoBehaviour
 				{
 					Siphone[x] = Prototype[x];
 				}
+				Debug.LogFormat("[Stars #{0}] The sequence that must be submitted is: 3", moduleId);
 			}
 			
 			else if (Costing == 7)
@@ -423,6 +466,7 @@ public class Stars2Script : MonoBehaviour
 				{
 					Siphone[x] = Prototype[x];
 				}
+				Debug.LogFormat("[Stars #{0}] The sequence that must be submitted is: 5, 4, 3", moduleId);
 			}
 			
 			else if (Costing == 8)
@@ -432,6 +476,7 @@ public class Stars2Script : MonoBehaviour
 				{
 					Siphone[x] = Prototype[x];
 				}
+				Debug.LogFormat("[Stars #{0}] The sequence that must be submitted is: 3, 1", moduleId);
 			}
 			
 			else if (Costing == 9)
@@ -441,11 +486,13 @@ public class Stars2Script : MonoBehaviour
 				{
 					Siphone[x] = Prototype[x];
 				}
+				Debug.LogFormat("[Stars #{0}] The sequence that must be submitted is: 5, 4, 3, 1, 2", moduleId);
 			}
 		}
 		
 		else
 		{
+			Debug.LogFormat("[Stars #{0}] Column 5 is the correct column", moduleId);
 			if (Costing == 0)
 			{
 				int[] Prototype = {2, 5, 0, 0, 0, 0, 0, 0, 0, 0};
@@ -453,6 +500,7 @@ public class Stars2Script : MonoBehaviour
 				{
 					Siphone[x] = Prototype[x];
 				}
+				Debug.LogFormat("[Stars #{0}] The sequence that must be submitted is: 2, 5", moduleId);
 			}
 			
 			else if (Costing == 1)
@@ -462,6 +510,7 @@ public class Stars2Script : MonoBehaviour
 				{
 					Siphone[x] = Prototype[x];
 				}
+				Debug.LogFormat("[Stars #{0}] The sequence that must be submitted is: 5, 1, 4", moduleId);
 			}
 			
 			else if (Costing == 2)
@@ -471,6 +520,7 @@ public class Stars2Script : MonoBehaviour
 				{
 					Siphone[x] = Prototype[x];
 				}
+				Debug.LogFormat("[Stars #{0}] The sequence that must be submitted is: 1, 1, 4", moduleId);
 			}
 			
 			else if (Costing == 3)
@@ -480,6 +530,7 @@ public class Stars2Script : MonoBehaviour
 				{
 					Siphone[x] = Prototype[x];
 				}
+				Debug.LogFormat("[Stars #{0}] The sequence that must be submitted is: 1, 3, 5", moduleId);
 			}
 			
 			else if (Costing == 4)
@@ -489,6 +540,7 @@ public class Stars2Script : MonoBehaviour
 				{
 					Siphone[x] = Prototype[x];
 				}
+				Debug.LogFormat("[Stars #{0}] The sequence that must be submitted is: 5", moduleId);
 			}
 			
 			else if (Costing == 5)
@@ -498,6 +550,7 @@ public class Stars2Script : MonoBehaviour
 				{
 					Siphone[x] = Prototype[x];
 				}
+				Debug.LogFormat("[Stars #{0}] The sequence that must be submitted is: 3, 3, 3, 3, 1", moduleId);
 			}
 			
 			else if (Costing == 6)
@@ -507,6 +560,7 @@ public class Stars2Script : MonoBehaviour
 				{
 					Siphone[x] = Prototype[x];
 				}
+				Debug.LogFormat("[Stars #{0}] The sequence that must be submitted is: 3, 4, 1, 2, 1, 2, 4", moduleId);
 			}
 			
 			else if (Costing == 7)
@@ -516,6 +570,7 @@ public class Stars2Script : MonoBehaviour
 				{
 					Siphone[x] = Prototype[x];
 				}
+				Debug.LogFormat("[Stars #{0}] The sequence that must be submitted is: 1, 5, 2", moduleId);
 			}
 			
 			else if (Costing == 8)
@@ -525,6 +580,7 @@ public class Stars2Script : MonoBehaviour
 				{
 					Siphone[x] = Prototype[x];
 				}
+				Debug.LogFormat("[Stars #{0}] The sequence that must be submitted is: 1, 4, 2", moduleId);
 			}
 			
 			else if (Costing == 9)
@@ -534,6 +590,7 @@ public class Stars2Script : MonoBehaviour
 				{
 					Siphone[x] = Prototype[x];
 				}
+				Debug.LogFormat("[Stars #{0}] The sequence that must be submitted is: 5, 2", moduleId);
 			}
 		}
 	}
@@ -566,12 +623,57 @@ public class Stars2Script : MonoBehaviour
 					SiphoneAnswer[x] = 0;
 				}
 				Default = 0;
+				Debug.LogFormat("[Stars #{0}] All inputs has been cleared", moduleId);
 			}
 			
 			else if (Complements == 1)
 			{
 				StartCoroutine(Starlighting());
 				Animating = true;
+				int ZeroCount = 0;
+				for (int x = 0; x < 10; x++)
+				{
+					if (SiphoneAnswer[x] == 0)
+					{
+						ZeroCount++;
+					}
+				}
+				if (ZeroCount == 10)
+				{
+					Debug.LogFormat("[Stars #{0}] The sequence you submitted is: 0", moduleId);
+				}
+				else if (ZeroCount == 0)
+				{
+					string logans = "";
+					for (int i = 0; i < 10; i++)
+					{
+						if (i != 9)
+						{
+							logans += SiphoneAnswer[i].ToString()+", ";
+						}
+						else
+						{
+							logans += "...";
+						}
+					}
+					Debug.LogFormat("[Stars #{0}] The sequence you submitted is: {1}", moduleId, logans);
+				}
+				else
+				{
+					string logans = "";
+					for (int i = 0; i < 10-ZeroCount; i++)
+					{
+						if (i != (10-ZeroCount-1))
+						{
+							logans += SiphoneAnswer[i].ToString()+", ";
+						}
+						else
+						{
+							logans += SiphoneAnswer[i].ToString();
+						}
+					}
+					Debug.LogFormat("[Stars #{0}] The sequence you submitted is: {1}", moduleId, logans);
+				}
 			}
 		}
 	}
@@ -632,7 +734,13 @@ public class Stars2Script : MonoBehaviour
 		
 		if (Mistake == true)
 		{
+			Debug.LogFormat("[Stars #{0}] The sequence given is incorrect. A strike was given.", moduleId);
 			Module.HandleStrike();
+			for (int x = 0; x < 10; x++)
+			{
+				SiphoneAnswer[x] = 0;
+			}
+			Default = 0;
 			for (int x = 0; x < Stars.Count(); x++)
 			{
 				Stars[x].material = Colors[0];
@@ -646,6 +754,7 @@ public class Stars2Script : MonoBehaviour
 		
 		else
 		{
+			Debug.LogFormat("[Stars #{0}] The sequence given is correct. Module solved.", moduleId);
 			Module.HandlePass();
 			Audio.PlaySoundAtTransform(StarMusical[7].name, transform);
 			ModuleSolved = true;
