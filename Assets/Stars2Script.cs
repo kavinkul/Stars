@@ -386,7 +386,7 @@ public class Stars2Script : MonoBehaviour
 			}
 		}
 		
-		else if (Bomb.GetOffIndicators().Count() == 0)
+		else if (Bomb.GetOnIndicators().Count() == 0)
 		{
 			Debug.LogFormat("[Stars #{0}] Column 4 is the correct column", moduleId);
 			if (Costing == 0)
