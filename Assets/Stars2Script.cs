@@ -824,6 +824,8 @@ public class Stars2Script : MonoBehaviour
 				yield return "sendtochaterror The module is performing an animation. Command ignored";
 				yield break;
 			}
+			yield return "solve";
+			yield return "strike";
 			ComplementaryButtons[1].OnInteract();
 		}
 	}
